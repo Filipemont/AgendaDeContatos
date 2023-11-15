@@ -37,5 +37,10 @@ namespace ListaDeContatos.Repositorio
             _bancoContext.SaveChanges();
             return contato;
         }
+
+        public ContatoModel listarPorId(int id)
+        {
+            return _bancoContext.Contatos.FirstOrDefault(i => i.Id == id);
+        }
     }
 }

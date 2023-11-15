@@ -22,9 +22,10 @@ namespace ListaDeContatos.Controllers
         }
 
 
-        public IActionResult Editar()
+        public IActionResult Editar(int id)
         {
-            return View();
+            var contato =_contatoRepositorio.listarPorId(id);
+            return View(contato);
         }
         public IActionResult ApagarConfirmacao()
         {
@@ -42,6 +43,7 @@ namespace ListaDeContatos.Controllers
             _contatoRepositorio.Editar(contato);
             return RedirectToAction("Index");
         }
+        [HttpPost]
         public IActionResult Delete(ContatoModel contato)
         {
             _contatoRepositorio.Apagar(contato);
