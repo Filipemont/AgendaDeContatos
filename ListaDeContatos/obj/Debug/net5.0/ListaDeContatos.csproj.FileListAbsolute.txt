@@ -360,3 +360,6 @@ D:\gitHub\ListaDeContatos\ListaDeContatos\obj\Debug\net5.0\ListaDeContatos.pdb
 D:\gitHub\ListaDeContatos\ListaDeContatos\obj\Debug\net5.0\ListaDeContatos.genruntimeconfig.cache
 D:\gitHub\ListaDeContatos\ListaDeContatos\obj\Debug\net5.0\ref\ListaDeContatos.dll
 D:\gitHub\ListaDeContatos\ListaDeContatos\obj\Debug\net5.0\Razor\Views\Contato\Index.cshtml.g.cs
+D:\gitHub\ListaDeContatos\ListaDeContatos\obj\Debug\net5.0\Razor\Views\Contato\Criar.cshtml.g.cs
+D:\gitHub\ListaDeContatos\ListaDeContatos\obj\Debug\net5.0\Razor\Views\Contato\Editar.cshtml.g.cs
+D:\gitHub\ListaDeContatos\ListaDeContatos\obj\Debug\net5.0\Razor\Views\Contato\ApagarConfirmacao.cshtml.g.cs
