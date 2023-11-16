@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Numerics;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ListaDeContatos.Models
 {

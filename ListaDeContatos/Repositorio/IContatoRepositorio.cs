@@ -11,6 +11,6 @@ namespace ListaDeContatos.Repositorio
         List<ContatoModel> BuscarContatos();
         ContatoModel Adicionar(ContatoModel contato);
         ContatoModel Editar(ContatoModel contato);
-        ContatoModel Apagar(ContatoModel contato);
+        bool Apagar(int id);
     }
 }

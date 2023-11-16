@@ -19,6 +19,15 @@ namespace ListaDeContatos.Repositorio
             return contato;
         }
 
+        public bool Apagar(int id)
+        {
+            ContatoModel contatoDB = listarPorId(id);
+            if (contatoDB == null) throw new System.Exception("Houve um erro na deleção do contato");
+            _bancoContext.Contatos.Remove(contatoDB);
+            _bancoContext.SaveChanges();
+            return true;
+        }
+
         public List<ContatoModel> BuscarContatos()
         {
             return _bancoContext.Contatos.ToList();
@@ -31,12 +40,6 @@ namespace ListaDeContatos.Repositorio
             return contato;
         }
 
-        public ContatoModel Apagar(ContatoModel contato)
-        {
-            _bancoContext.Contatos.Remove(contato);
-            _bancoContext.SaveChanges();
-            return contato;
-        }
 
         public ContatoModel listarPorId(int id)
         {

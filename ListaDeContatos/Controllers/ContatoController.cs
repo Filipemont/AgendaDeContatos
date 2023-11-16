@@ -21,32 +21,33 @@ namespace ListaDeContatos.Controllers
             return View();
         }
 
-
-        public IActionResult Editar(int id)
-        {
-            var contato =_contatoRepositorio.listarPorId(id);
-            return View(contato);
-        }
-        public IActionResult ApagarConfirmacao()
-        {
-            return View();
-        }
         [HttpPost]
         public IActionResult Criar(ContatoModel contato)
         {
             _contatoRepositorio.Adicionar(contato);
             return RedirectToAction("Index");
         }
+
+        public IActionResult Editar(int id)
+        {
+            var contato = _contatoRepositorio.listarPorId(id);
+            return View(contato);
+        }
+
         [HttpPost]
         public IActionResult Editar(ContatoModel contato)
         {
             _contatoRepositorio.Editar(contato);
             return RedirectToAction("Index");
         }
-        [HttpPost]
-        public IActionResult Delete(ContatoModel contato)
+        public IActionResult ApagarConfirmacao(int id)
         {
-            _contatoRepositorio.Apagar(contato);
+            ContatoModel identidade = _contatoRepositorio.listarPorId(id);
+            return View(identidade);
+        }
+        public IActionResult Delete(int id)
+        {
+            _contatoRepositorio.Apagar(id);
             return RedirectToAction("Index");
         }
     }
